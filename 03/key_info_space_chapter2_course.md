@@ -199,6 +199,15 @@ Previous token: a DET
 Matched span: Golden Retriever
 ```
 
+**Modele statystyczne vs reguły:**
+
+| | Modele statystyczne | Systemy regułowe |
+|---|---|---|
+| Kiedy | aplikacja musi **uogólniać** na podstawie przykładów | słownik ze **skończoną** liczbą przykładów |
+| Przykłady | nazwy produktów, imiona osób, relacje podmiot/dopełnienie | kraje świata, miasta, nazwy leków, rasy psów |
+| W spaCy | entity recognizer, dependency parser, part-of-speech tagger | własne reguły tokenizacji, `Matcher`, `PhraseMatcher` |
+| Przykład sytuacji | „Yesterday Marta Wiśniewska bought ibuprofen in Berlin.” → `Marta Wiśniewska` = PERSON. Nie da się zrobić listy wszystkich imion, a model rozpoznaje imię, którego nigdy nie widział | ten sam tekst → `ibuprofen`. `en_core_web_sm` nie ma etykiety DRUG, a lista leków jest skończona, więc wystarczy `PhraseMatcher` z listą |
+
 | Co | Do czego |
 |---|---|
 | `span.root` | główny token frazy (dla „Golden Retriever” → „Retriever”) |
