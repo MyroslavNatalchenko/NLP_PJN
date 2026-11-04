@@ -10,3 +10,4 @@ Materials from the NLP (Natural Language Processing, PJN) course – Jupyter not
 2. [02 – Word vectors](02/) – embeddings, cosine similarity, gensim and Flair
 3. [03 – LSTM](03/) – LSTM networks: predicting next word and sentence
 4. [04 – Transformers, part 1](04/) – attention mechanism: query, key, value, single-head and multi-head attention
+5. [05 – Transformers, part 2](05/) – full architecture: positional encoding, encoder, decoder, masking and training a mini-Transformer
